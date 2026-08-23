@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - HIS 2026</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #c8e6c9;
+            --text-color: #333;
+            --link-color: #1b5e20;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        header h2 {
+            margin: 15px 0 25px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #e0e0e0;
+        }
+
+        .hero-details {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-details p {
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: var(--primary-color);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e2e6ea;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: var(--link-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.7rem;
+            color: #222;
+            font-size: 1.15rem;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+        }
+
+        .notice-box {
+            background: #f5fbf5;
+            border-left: 5px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 650px;
+            background: #ffffff;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            border: 1px solid #d7e8d8;
+            padding: 14px 16px;
+            vertical-align: middle;
+        }
+
+        .fee-table th {
+            background: #f1f8f1;
+            color: #222;
+            font-size: 1.05rem;
+            text-align: center;
+        }
+
+        .fee-table td:first-child {
+            font-weight: 600;
+            width: 42%;
+        }
+
+        .fee-table td:not(:first-child) {
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .currency-main {
+            display: block;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .currency-converted {
+            display: block;
+            margin-top: 2px;
+            font-size: 0.92rem;
+            color: #555;
+            line-height: 1.45;
+        }
+
+        .exchange-note {
+            background: #f5fbf5;
+            border-left: 5px solid var(--primary-color);
+            padding: 1rem 1.25rem;
+            margin: 1rem 0 1.5rem;
+            border-radius: 4px;
+            font-size: 0.98rem;
+        }
+
+        .exchange-note p {
+            margin: 0.25rem 0;
+        }
+
+        .policy-notes {
+            margin-top: 1.5rem;
+        }
+
+        .policy-note {
+            margin: 0.9rem 0;
+        }
+
+        .payment-card {
+            background: #f7f7f7;
+            border: 1px solid var(--secondary-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .payment-card h4 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.25rem;
+        }
+
+        .qr-row {
+            display: flex;
+            gap: 1.75rem;
+            align-items: flex-start;
+            margin: 1.25rem 0;
+            flex-wrap: wrap;
+        }
+
+        .qr-code {
+            width: 180px;
+            height: 180px;
+            object-fit: contain;
+            border: 1px solid var(--secondary-color);
+            background: #fff;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        .bank-details {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .bank-details p {
+            margin: 0.45rem 0;
+        }
+
+        .payment-action {
+            text-align: center;
+            margin-top: 1.2rem;
+        }
+
+        .wechat-box {
+            background: #f5fbf5;
+            border: 1px solid var(--secondary-color);
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #222;
+            color: #aaa;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+
+            .qr-row {
+                display: block;
+            }
+
+            .qr-code {
+                display: block;
+                margin: 0 auto 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Registration</h1>
+        <h2>15th International Conference on Health Information Science</h2>
+        <div class="hero-details">
+            <p><strong>HIS 2026 @ Haikou, Hainan, China</strong></p>
+            <p><strong>Date:</strong> 11-14 November 2026</p>
+        </div>
+        <a href="index.html" class="btn">&larr; Back to Home</a>
+        <a href="#payment" class="btn">Payment Methods</a>
+    </header>
+
+    <div class="container">
+        <section>
+            <h3>Registration Fees</h3>
+            <div class="exchange-note">
+                <p><strong>Accepted currencies:</strong> Registration fees may be paid in US Dollars (USD), Australian Dollars (AUD), or Chinese Yuan (RMB).</p>
+            </div>
+            <div class="table-wrap">
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Participation</th>
+                            <th>Reduced Early Registration by 20/09</th>
+                            <th>Late Registration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Author Registration</td>
+                            <td><span class="currency-main">US$800</span><span class="currency-converted">AU$1,120<br>RMB &yen;5,408</span></td>
+                            <td><span class="currency-main">US$900</span><span class="currency-converted">AU$1,260<br>RMB &yen;6,084</span></td>
+                        </tr>
+                        <tr>
+                            <td>Regular Registration<br><span style="font-weight:400;">(second and next author or non-author)</span></td>
+                            <td><span class="currency-main">US$700</span><span class="currency-converted">AU$980<br>RMB &yen;4,732</span></td>
+                            <td><span class="currency-main">US$800</span><span class="currency-converted">AU$1,120<br>RMB &yen;5,408</span></td>
+                        </tr>
+                        <tr>
+                            <td>Student Registration *</td>
+                            <td><span class="currency-main">US$400</span><span class="currency-converted">AU$560<br>RMB &yen;2,704</span></td>
+                            <td><span class="currency-main">US$500</span><span class="currency-converted">AU$700<br>RMB &yen;3,380</span></td>
+                        </tr>
+                        <tr>
+                            <td>Additional Paper Fee **</td>
+                            <td><span class="currency-main">US$700/paper</span><span class="currency-converted">AU$980/paper<br>RMB &yen;4,732/paper</span></td>
+                            <td><span class="currency-main">US$800/paper</span><span class="currency-converted">AU$1,120/paper<br>RMB &yen;5,408/paper</span></td>
+                        </tr>
+                        <tr>
+                            <td>Extra Page (max. 2 pages)</td>
+                            <td><span class="currency-main">US$100</span><span class="currency-converted">AU$140<br>RMB &yen;676</span></td>
+                            <td><span class="currency-main">US$100</span><span class="currency-converted">AU$140<br>RMB &yen;676</span></td>
+                        </tr>
+                        <tr>
+                            <td>Banquet ***</td>
+                            <td colspan="2"><span class="currency-main">US$200</span><span class="currency-converted">AU$280 &nbsp;|&nbsp; RMB &yen;1,352</span></td>
+                        </tr>
+                        <tr>
+                            <td>Welcome Reception ***</td>
+                            <td colspan="2"><span class="currency-main">US$100</span><span class="currency-converted">AU$140 &nbsp;|&nbsp; RMB &yen;676</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ticket Lunch ***</td>
+                            <td colspan="2"><span class="currency-main">US$100</span><span class="currency-converted">AU$140 &nbsp;|&nbsp; RMB &yen;676</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="notice-box policy-notes">
+                <p class="policy-note"><strong>*</strong> According to the conference policy, <strong>AT LEAST ONE NON-student registration</strong> for each accepted paper should be made in time for inclusion of the paper in the SPRINGER proceedings. This means that a student will pay the reduced registration fee <strong>ONLY IF AT LEAST ANOTHER FULL Author registration</strong> is paid for his/her paper.</p>
+                <p class="policy-note"><strong>**</strong> Maximum one additional paper for each full registration. Additional paper registration should match the name of the full registration and the same person should present both papers &ndash; attend the conference.</p>
+                <p class="policy-note"><strong>***</strong> Author Registration, Regular Registration and Student Registration will include a banquet, a welcome reception and lunch tickets.</p>
+            </div>
+        </section>
+
+        <section id="payment">
+            <h3>Payment Methods</h3>
+            <p class="intro-text">Please select your payment method below:</p>
+
+            <div class="payment-card">
+                <h4>1. Registration by Chinese Yuan</h4>
+                <p><strong>Conference RMB registration rate:</strong> 1 US$ = 6.76 RMB.</p>
+                <p><strong>Step 1:</strong> Pay registration with the QR code below.</p>
+                <p lang="zh-CN">注：本次会议人民币注册费委托信诚商务会展（天津）有限公司收款，并通过邮箱开具电子增值税普通发票。发票内容开会议费/会务费/会议注册费。请在付款时标注：姓名，单位名称，发票税号，邮箱，手机号。电子发票发到邮箱里。</p>
+
+                <div class="qr-row">
+                    <img class="qr-code"
+                    src="images/registration-payment-qr.png"
+                    alt="Registration Payment QR Code">
+                    <div class="bank-details" lang="zh-CN">
+                        <p><strong>收款账户：</strong>全高信息服务（北京）有限公司</p>
+                        <p><strong>银行账号：</strong>1109 6093 8410 001</p>
+                        <p><strong>开户银行：</strong>招商银行股份有限公司北京城市副中心分行营业部</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-card">
+                <h4>2. Register by Credit Card Online</h4>
+                <p>Register by credit card online through the VU secure payment system.</p>
+                <div class="payment-action">
+                    <a href="https://payments.vu.edu.au/V9Y/tran?UDS_ACTION=DEFAULT&amp;tran-type=HIS" class="btn btn-primary" target="_blank" rel="noopener noreferrer">VU Secure Payment System</a>
+                </div>
+                <p>Please find related information from <a href="https://www.his-conferences.org/2026/" target="_blank" rel="noopener noreferrer">the HIS 2026 website</a> for your registration, such as conference title and location. You will find an invoice for your registration in the final step, and the invoice will also be sent to your email.</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Wechat Group</h3>
+            <div class="wechat-box">
+                <p>Please join HIS2026 Wechat Group through the QR code:</p>
+                <!-- HIS 2026 微信群二维码 -->
+                <img class="qr-code"
+                    src="images/his2026-wechat-group-qr.png"
+                    alt="HIS 2026 WeChat Group QR Code">
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HIS Conference. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
