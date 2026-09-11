@@ -216,6 +216,16 @@
             border-radius: 6px;
         }
 
+        .remark-guide-image {
+            display: block;
+            width: 320px;
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
         .bank-details {
             flex: 1;
             min-width: 280px;
@@ -349,22 +359,34 @@
             <p class="intro-text">Please select your payment method below:</p>
 
             <div class="payment-card">
-                <h4>1. Registration by Chinese Yuan</h4>
-                <p><strong>Conference RMB registration rate:</strong> 1 US$ = 6.76 RMB.</p>
-                <p><strong>Step 1:</strong> Pay registration with the QR code below.</p>
-                <p lang="zh-CN">注：本次会议人民币注册费委托全高信息服务（北京）有限公司收款，并通过邮箱开具电子增值税普通发票。发票内容开会议费/会务费/会议注册费。请在付款时备注：姓名，单位名称，发票税号，邮箱，手机号。</p>
+        <h4>1. Registration by Chinese Yuan</h4>
+        <p><strong>Conference RMB registration rate:</strong> 1 US$ = 6.76 RMB.</p>
+        <p><strong>Step 1:</strong> Pay registration with the QR code below.</p>
 
-                <div class="qr-row">
-                    <img class="qr-code"
-                    src="images/registration-payment-qr.png"
-                    alt="Registration Payment QR Code">
-                    <div class="bank-details" lang="zh-CN">
-                        <p><strong>收款账户：</strong>全高信息服务（北京）有限公司</p>
-                        <p><strong>银行账号：</strong>1109 6093 8410 001</p>
-                        <p><strong>开户银行：</strong>招商银行股份有限公司北京城市副中心分行营业部</p>
-                    </div>
-                </div>
+        <p lang="zh-CN">
+            注：本次会议人民币注册费委托全高信息服务（北京）有限公司收款，并通过邮箱开具电子增值税普通发票。
+            发票内容可开会议费/会务费/会议注册费。
+            <strong>请在付款附言/备注中注明：单位名称、姓名、Paper ID；如有发票税号，也请一并注明。</strong>
+        </p>
+
+        <div class="qr-row">
+            <img class="qr-code"
+                 src="images/registration-payment-qr.png"
+                 alt="Registration Payment QR Code">
+            <div class="bank-details" lang="zh-CN">
+                <p><strong>收款账户：</strong>全高信息服务（北京）有限公司</p>
+                <p><strong>银行账号：</strong>1109 6093 8410 001</p>
+                <p><strong>开户银行：</strong>招商银行股份有限公司北京城市副中心分行营业部</p>
             </div>
+        </div>
+
+        <div class="payment-remark-guide" lang="zh-CN">
+            <p><strong>填写示例：</strong>请在支付页面的“付款附言”栏填写：单位名称、姓名、Paper ID；如有税号，也请填写。</p>
+            <img src="images/payment-remark-example.png"
+                 alt="付款附言填写示意图"
+                 class="remark-guide-image">
+        </div>
+    </div>
 
             <div class="payment-card">
                 <h4>2. Register by Credit Card Online</h4>
