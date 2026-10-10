@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program - HIS 2026</title>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --secondary-color: #c8e6c9;
+            --text-color: #333;
+            --link-color: #1b5e20;
+            --border-color: #d7e8d8;
+            --soft-bg: #f5fbf5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        header h2 {
+            margin: 15px 0 25px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #e0e0e0;
+        }
+
+        .hero-details {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-details p {
+            margin: 5px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: var(--primary-color);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            margin: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #e2e6ea;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: var(--link-color);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 20px;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: var(--link-color);
+        }
+
+        .notice-box {
+            background: var(--soft-bg);
+            border-left: 5px solid var(--primary-color);
+            padding: 1.2rem 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .notice-box p {
+            margin: 0.35rem 0;
+        }
+
+        .document-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin: 1.5rem 0;
+        }
+
+        .document-actions .btn {
+            margin: 0;
+        }
+
+        .document-frame-wrap {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+            background: #f7f7f7;
+            min-height: 720px;
+        }
+
+        .document-frame {
+            display: block;
+            width: 100%;
+            height: 78vh;
+            min-height: 720px;
+            border: 0;
+            background: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #222;
+            color: #aaa;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 2.1rem;
+            }
+
+            header h2 {
+                font-size: 1.2rem;
+            }
+
+            .container {
+                margin-top: 2rem;
+            }
+
+            .document-frame,
+            .document-frame-wrap {
+                min-height: 560px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HIS 2026 Program</h1>
+        <h2>15th International Conference on Health Information Science</h2>
+        <div class="hero-details">
+            <p><strong>Date:</strong> 11-13 November 2026</p>
+            <p><strong>Location:</strong> Haikou, Hainan, China</p>
+        </div>
+        <a href="index.html" class="btn">&larr; Back to Home</a>
+        <a href="venue-accommodation.html" class="btn">Venue & Accommodation</a>
+        <a href="registration.html" class="btn">Registration</a>
+    </header>
+
+    <div class="container">
+        <section>
+            <h3>Conference Program</h3>
+            <div class="notice-box">
+                <p><strong>Program file:</strong> Program Plan_HIS 2026_v2_Two_Rooms.docx</p>
+                <p><strong>Note:</strong> Some details are still to be confirmed. The embedded preview and download link will use the latest uploaded file with the same filename.</p>
+            </div>
+
+            <div class="document-actions">
+                <a class="btn btn-primary" href="Program%20Plan_HIS%202026_v2_Two_Rooms.docx" download>Download Program DOCX</a>
+                <a class="btn btn-primary" href="Program%20Plan_HIS%202026_v2_Two_Rooms.docx" target="_blank" rel="noopener noreferrer">Open Program File</a>
+            </div>
+
+            <div class="document-frame-wrap">
+                <iframe
+                    class="document-frame"
+                    title="HIS 2026 Program Document"
+                    src="https://view.officeapps.live.com/op/embed.aspx?src=https%3A%2F%2Fwww.his-conferences.org%2F2026%2FProgram%2520Plan_HIS%25202026_v2_Two_Rooms.docx">
+                </iframe>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 HIS Conference. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
